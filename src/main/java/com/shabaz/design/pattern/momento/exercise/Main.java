@@ -1,0 +1,78 @@
+package com.shabaz.design.pattern.momento.exercise;
+
+public class Main {
+    public static void main(String[] args) {
+        Document document = new Document();
+        VersionControl versionControl = new VersionControl(document.getState());
+        document.setFontName("Arial-Title");
+        versionControl.save(document.getState());
+        document.setFontSize(16);
+        versionControl.save(document.getState());
+        document.write("Header");
+        versionControl.save(document.getState());
+        document.setFontName("Arial-Body");
+        versionControl.save(document.getState());
+        document.setFontSize(14);
+        versionControl.save(document.getState());
+        document.write("Body");
+        versionControl.save(document.getState());
+        document.setFontName("Arial-Light");
+        versionControl.save(document.getState());
+        document.setFontSize(12);
+        versionControl.save(document.getState());
+        document.write("Footer");
+        versionControl.save(document.getState());
+        System.out.println("Initial State:" + document);
+        document.restore(versionControl.undo());
+        System.out.println("After Undo:" + document);
+        document.restore(versionControl.undo());
+        System.out.println("After Undo:" + document);
+        document.restore(versionControl.undo());
+        System.out.println("After Undo:" + document);
+        document.restore(versionControl.undo());
+        System.out.println("After Undo:" + document);
+        document.restore(versionControl.undo());
+        System.out.println("After Undo:" + document);
+        document.restore(versionControl.undo());
+        System.out.println("After Undo:" + document);
+        document.restore(versionControl.undo());
+        System.out.println("After Undo:" + document);
+        document.restore(versionControl.undo());
+        System.out.println("After Undo:" + document);
+        document.restore(versionControl.undo());
+        System.out.println("After Undo:" + document);
+        document.restore(versionControl.undo());
+        System.out.println("After Undo:" + document);
+        document.restore(versionControl.undo());
+        System.out.println("After Undo:" + document);
+        document.restore(versionControl.undo());
+        System.out.println("After Undo:" + document);
+        document.restore(versionControl.undo());
+        System.out.println("After Undo:" + document);
+        document.restore(versionControl.redo());
+        System.out.println("After Redo:" + document);
+        document.restore(versionControl.redo());
+        System.out.println("After Redo:" + document);
+        document.restore(versionControl.redo());
+        System.out.println("After Redo:" + document);
+        document.restore(versionControl.redo());
+        System.out.println("After Redo:" + document);
+        document.restore(versionControl.redo());
+        System.out.println("After Redo:" + document);
+        document.restore(versionControl.redo());
+        System.out.println("After Redo:" + document);
+        document.restore(versionControl.redo());
+        System.out.println("After Redo:" + document);
+        document.restore(versionControl.redo());
+        System.out.println("After Redo:" + document);
+        document.restore(versionControl.redo());
+        System.out.println("After Redo:" + document);
+        document.restore(versionControl.redo());
+        System.out.println("After Redo:" + document);
+        document.restore(versionControl.redo());
+        System.out.println("After Redo:" + document);
+        document.restore(versionControl.redo());
+        System.out.println("After Redo:" + document);
+
+    }
+}
